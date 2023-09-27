@@ -110,10 +110,9 @@ watch([vscode, spotify], () => {
 
 <template>
   <div class="flex flex-col items-center m-2">
-    <LayoutsRippleEffect class="rounded-md">
+    <LayoutsRippleEffect class="rounded-md" v-if="selectedTab == 0 && vscode">
       <div
         class="flex relative items-center gap-3 transition-all rounded-md hover:bg-white p-2 hover:bg-opacity-10 cursor-pointer select-none group"
-        v-if="selectedTab == 0 && vscode"
         @click="changeTab(1)"
       >
         <div
@@ -136,10 +135,12 @@ watch([vscode, spotify], () => {
         </div>
       </div>
     </LayoutsRippleEffect>
-    <LayoutsRippleEffect class="rounded-md">
+    <LayoutsRippleEffect
+      class="rounded-md"
+      v-if="(spotify && selectedTab == 1) || !vscode"
+    >
       <div
         class="flex relative items-center gap-3 transition-all rounded-md hover:bg-white p-2 hover:bg-opacity-10 cursor-pointer select-none group"
-        v-if="(spotify && selectedTab == 1) || !vscode"
         @click="changeTab(0)"
       >
         <div
