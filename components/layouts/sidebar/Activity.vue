@@ -151,6 +151,7 @@ watch([vscode, spotify], () => {
         </div>
         <img
           :src="spotify?.album_art_url"
+          v-if="spotify"
           class="w-16 h-16 rounded-md object-cover"
         />
         <div class="w-fit relative">

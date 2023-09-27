@@ -38,9 +38,10 @@ const items = [
     </Transition>
   </div>
   <div
-    :class="`flex flex-col h-full justify-between bg-[#151317] bg-opacity-80 absolute md:static w-full md:w-fit -left-[100vw] transition-all z-50 backdrop-blur-sm duration-500`"
+    :class="`flex flex-col h-full justify-between bg-[#151317] bg-opacity-80 absolute md:static w-full md:w-fit transition-all backdrop-blur-sm duration-500`"
     :style="{
-      left: toggleSidebar ? '0' : '-100vw',
+      opacity: toggleSidebar ? 1 : 0,
+      zIndex: toggleSidebar ? 50 : -20,
     }"
   >
     <div class="py-6 px-8 md:py-16 md:px-10 2xl:px-12">

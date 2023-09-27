@@ -125,6 +125,7 @@ const konami = [
   "a",
 ];
 let konamiCode = 0;
+let isPhone = false;
 
 const checkKonami = (e: KeyboardEvent) => {
   if (e.key === konami[konamiCode]) {
@@ -143,6 +144,7 @@ const checkKonami = (e: KeyboardEvent) => {
 
 onMounted(() => {
   window.addEventListener("keydown", checkKonami);
+  isPhone = window.innerWidth < 768;
 });
 
 onUnmounted(() => {
@@ -160,6 +162,7 @@ onUnmounted(() => {
             :options="options"
             :key="options.particles.number.value"
             @load="loaded = true"
+            v-if="!isPhone"
           />
         </div>
         <LayoutsSidebar />
