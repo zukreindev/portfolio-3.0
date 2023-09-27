@@ -155,7 +155,7 @@ onUnmounted(() => {
 <template>
   <Transition>
     <div class="relative" v-show="loaded">
-      <div class="w-full h-screen flex flex-col md:flex-row">
+      <div class="w-full  h-screen flex flex-col md:flex-row">
         <div class="-z-[1]">
           <NuxtParticles
             id="tsparticles"

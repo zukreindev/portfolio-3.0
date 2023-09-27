@@ -2,6 +2,7 @@
 import { Icon } from "@iconify/vue";
 
 const toggleSidebar = ref<boolean>(false);
+const isMobile = ref<boolean>(false);
 
 const items = [
   {
@@ -21,6 +22,10 @@ const items = [
     link: "/contact",
   },
 ];
+
+onMounted(() => {
+  if (window.innerWidth < 768) isMobile.value = true;
+});
 </script>
 
 <template>
@@ -40,16 +45,16 @@ const items = [
   <div
     :class="`flex flex-col h-full justify-between bg-[#151317] bg-opacity-80 absolute md:static w-full md:w-fit transition-all backdrop-blur-sm duration-500`"
     :style="{
-      opacity: toggleSidebar ? 1 : 0,
-      zIndex: toggleSidebar ? 50 : -20,
+      opacity: isMobile ? (toggleSidebar ? 1 : 0) : 1,
+      zIndex: isMobile ? (toggleSidebar ? 100 : -1) : 1,
     }"
   >
-    <div class="py-6 px-8 md:py-16 md:px-10 2xl:px-12">
+    <div class="py-6 px-8 md:py-16 md:px-10 2xl:px-12 relative">
       <h1 class="text-3xl font-bold text-[#AE3DFF]">zukrein</h1>
       <Transition>
         <Icon
           icon="mdi:close"
-          class="text-3xl text-[#AE3DFF] cursor-pointer absolute top-6 right-8 block md:hidden"
+          class="text-3xl text-[#AE3DFF] cursor-pointer absolute top-6 right-8 block md:hidden z-50"
           @click="toggleSidebar = !toggleSidebar"
           v-if="toggleSidebar"
         />
