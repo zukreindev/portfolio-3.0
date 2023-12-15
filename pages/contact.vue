@@ -5,7 +5,7 @@ const platforms = [
     name: "Mail",
     alt: "contact@zukrein.me",
     icon: "mdi:email",
-    link: "mailto:contact@zukrein.me",
+    link: "mailto:contact@zukrein.xyz",
   },
   {
     name: "Discord",
