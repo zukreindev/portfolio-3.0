@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+  nitro: {
+    preset: "cloudflare-pages",
+  },
   modules: ["@nuxtjs/tailwindcss", "nuxt-particles", "@nuxt/content"],
   devtools: { enabled: true },
   tailwindcss: {
