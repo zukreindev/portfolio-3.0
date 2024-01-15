@@ -37,7 +37,6 @@ onMounted(() => {
               vscode.value = data.d[discordId].activities.find(
                 (x: any) => x.name === "Code" || x.name === "Visual Studio Code"
               );
-
               break;
             case "PRESENCE_UPDATE":
               // Spotify Activity
@@ -121,9 +120,10 @@ watch([vscode, spotify], () => {
         >
           <Icon icon="tabler:chevron-right" />
         </div>
-        <img
-          :src="'https://' + vscode.assets.large_image.split('https/')[1]"
+        <AsyncImage
           class="w-16 h-16 rounded-md object-cover"
+          :src="'https://' + vscode.assets.large_image.split('https/')[1]"
+          :alt="vscode.assets.large_text"
         />
         <div>
           <p class="text-white font-bold w-52">

@@ -1,4 +1,10 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "Projects",
+  description: "Where are my projects? Oh, it's right here.",
+})
+
+
 import { Icon } from "@iconify/vue";
 
 const { data: repos } = await useFetch("/api/repositories");
@@ -6,7 +12,7 @@ const { data: repos } = await useFetch("/api/repositories");
 const onClick = (url: string) => {
   setTimeout(() => {
     window.open(url, "_blank");
-  }, 400);
+  }, 200);
 };
 </script>
 
@@ -27,13 +33,11 @@ const onClick = (url: string) => {
     <div
       class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-7 mt-4"
     >
-      <NuxtLink
+      <LayoutsRippleEffect
         class="bg-gray-100 bg-opacity-5 hover:bg-opacity-10 w-full rounded-md backdrop-blur-md overflow-hidden text-gray-200 shadow-lg hover:-translate-y-1 cursor-pointer transition-all h-full"
         v-for="repo in repos"
-        @click="onClick(repo.html_url)"
-        target="_blank"
       >
-        <LayoutsRippleEffect
+        <NuxtLink @click="onClick(repo.html_url)"
           ><div class="flex flex-col gap-6 justify-between w-full h-full p-5">
             <div class="flex flex-col gap-3">
               <h4 class="text-[#AE3DFF] cursor-pointer">{{ repo.name }}</h4>
@@ -55,9 +59,9 @@ const onClick = (url: string) => {
                 <span class="text-gray-300">{{ repo.forks_count }}</span>
               </div>
             </div>
-          </div></LayoutsRippleEffect
+          </div></NuxtLink
         >
-      </NuxtLink>
+      </LayoutsRippleEffect>
     </div>
   </div>
 </template>
