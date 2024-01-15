@@ -51,6 +51,24 @@ const platforms = [
   },
 ];
 
+useSeoMeta({
+  title: "Zukrein | Contacts",
+  author: "Zukrein",
+  ogDescription: "Contact Me",
+  ogImage: "/images/ogimage.jpg",
+  ogUrl: "https://zukrein.me",
+  ogTitle: "Zukrein | Contacts",
+  ogType: "website",
+  ogLocale: "tr_TR",
+  ogSiteName: "zukrein.xyz",
+  twitterCard: "summary_large_image",
+  description: `I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. Join me in exploring my portfolio where design meets innovation.`,
+  twitterTitle: "Zukrein | Contacts",
+  twitterDescription:
+    "I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. ",
+  twitterImage: "/images/ogimage.jpg",
+});
+
 const onClick = (url: string) => {
   setTimeout(() => {
     window.open(url, "_blank");

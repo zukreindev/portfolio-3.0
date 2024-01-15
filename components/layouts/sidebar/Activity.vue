@@ -108,7 +108,7 @@ watch([vscode, spotify], () => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center m-2">
+  <div class="flex flex-col items-center m-2 overflow-hidden w-[290px]">
     <LayoutsRippleEffect class="rounded-md" v-if="selectedTab == 0 && vscode">
       <div
         class="flex relative items-center gap-3 transition-all rounded-md hover:bg-white p-2 hover:bg-opacity-10 cursor-pointer select-none group"
@@ -120,7 +120,7 @@ watch([vscode, spotify], () => {
         >
           <Icon icon="tabler:chevron-right" />
         </div>
-        <AsyncImage
+        <LayoutsAsyncImg
           class="w-16 h-16 rounded-md object-cover"
           :src="'https://' + vscode.assets.large_image.split('https/')[1]"
           :alt="vscode.assets.large_text"
@@ -149,7 +149,7 @@ watch([vscode, spotify], () => {
         >
           <Icon icon="tabler:chevron-left" />
         </div>
-        <img
+        <LayoutsAsyncImg
           :src="spotify?.album_art_url"
           v-if="spotify"
           class="w-16 h-16 rounded-md object-cover"

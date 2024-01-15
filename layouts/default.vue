@@ -142,20 +142,46 @@ const checkKonami = (e: KeyboardEvent) => {
   }
 };
 
+const content = ref<HTMLElement | null>(null);
 onMounted(() => {
   window.addEventListener("keydown", checkKonami);
   isPhone = window.innerWidth < 768;
+  content.value?.style.setProperty("opacity", "1");
+  console.log("mounted");
 });
 
 onUnmounted(() => {
   window.removeEventListener("keydown", checkKonami);
+});
+
+const router = useRouter();
+
+router.beforeEach(async (to, from, next) => {
+  await await new Promise((resolve) => {
+    content.value?.style.setProperty("opacity", "0");
+    setTimeout(() => {
+      resolve(true);
+    }, 150);
+  });
+
+  next();
+});
+
+router.afterEach(async (to, from) => {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true);
+    }, 50);
+  });
+
+  content.value?.style.setProperty("opacity", "1");
 });
 </script>
 
 <template>
   <Transition>
     <div class="relative" v-show="loaded">
-      <div class="w-full  h-screen flex flex-col md:flex-row">
+      <div class="w-full h-screen flex flex-col md:flex-row">
         <div class="-z-[1]">
           <NuxtParticles
             id="tsparticles"
@@ -167,7 +193,8 @@ onUnmounted(() => {
         </div>
         <LayoutsSidebar />
         <div
-          class="p-8 px-6 md:p-16 xs:pr-0 md:pr-20 xl:pr-44 w-full h-full overflow-auto"
+          class="p-8 px-6 md:p-16 xs:pr-0 md:pr-20 xl:pr-44 w-full h-full overflow-auto transition-opacity duration-150 ease-in-out"
+          ref="content"
         >
           <slot />
         </div>

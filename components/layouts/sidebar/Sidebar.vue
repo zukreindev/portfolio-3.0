@@ -26,6 +26,11 @@ const items = [
 onMounted(() => {
   if (window.innerWidth < 768) isMobile.value = true;
 });
+
+const handleClick = () => {
+  toggleSidebar.value = !toggleSidebar.value;
+  new Audio("/mouse.mp3").play();
+};
 </script>
 
 <template>
@@ -64,7 +69,7 @@ onMounted(() => {
           v-for="item in items"
           :to="item.link"
           class="text-2xl md:text-xl font-semibold text-[#AE3DFF] hover:text-[#793AA7] transition-all"
-          @click="toggleSidebar = !toggleSidebar"
+          @click="handleClick"
           >{{ item.name }}</NuxtLink
         >
       </div>

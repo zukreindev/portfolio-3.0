@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     configPath: "tailwind.config.js",
   },
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
     head: {
       meta: [
         {
@@ -26,7 +25,6 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: "dracula",
-
     },
   },
 });
