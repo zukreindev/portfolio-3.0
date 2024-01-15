@@ -3,9 +3,8 @@ import { Icon } from "@iconify/vue";
 
 const props = defineProps<{
   src: string;
-  alt: string;
+  alt: string | "undefined";
   class: string;
-  style: string;
 }>();
 const loaded = ref<"loading" | "error" | "loaded">("loading");
 
@@ -35,7 +34,6 @@ onMounted(() => {
     :src="props.src"
     :alt="props.alt"
     :class="props.class"
-    :style="props.style"
   />
   <div
     v-if="loaded === 'loading'"

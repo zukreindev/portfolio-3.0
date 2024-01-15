@@ -150,6 +150,7 @@ watch([vscode, spotify], () => {
           <Icon icon="tabler:chevron-left" />
         </div>
         <LayoutsAsyncImg
+          :alt="spotify?.song"
           :src="spotify?.album_art_url"
           v-if="spotify"
           class="w-16 h-16 rounded-md object-cover"

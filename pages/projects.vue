@@ -19,7 +19,7 @@ useSeoMeta({
 
 import { Icon } from "@iconify/vue";
 
-const { data: repos } = await useFetch("/api/repositories");
+const { data: repos } = await useFetch<any>("/api/repositories");
 
 const onClick = (url: string) => {
   setTimeout(() => {

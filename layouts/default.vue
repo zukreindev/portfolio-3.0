@@ -146,8 +146,6 @@ const content = ref<HTMLElement | null>(null);
 onMounted(() => {
   window.addEventListener("keydown", checkKonami);
   isPhone = window.innerWidth < 768;
-  content.value?.style.setProperty("opacity", "1");
-  console.log("mounted");
 });
 
 onUnmounted(() => {
@@ -193,7 +191,7 @@ router.afterEach(async (to, from) => {
         </div>
         <LayoutsSidebar />
         <div
-          class="p-8 px-6 md:p-16 xs:pr-0 md:pr-20 xl:pr-44 w-full h-full overflow-auto transition-opacity duration-150 ease-in-out"
+          class="p-8 px-6 md:p-16 xs:pr-0 md:pr-20 xl:pr-44 w-full overflow-auto transition-opacity duration-150 ease-in-out"
           ref="content"
         >
           <slot />

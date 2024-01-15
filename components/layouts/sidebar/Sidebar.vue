@@ -28,14 +28,23 @@ onMounted(() => {
 });
 
 const handleClick = () => {
-  toggleSidebar.value = !toggleSidebar.value;
+  toggleSidebar.value = toggleSidebar.value ? false : true;
   new Audio("/mouse.mp3").play();
 };
+
+const handleResize = () => {
+  if (window.innerWidth < 768) isMobile.value = true;
+  else isMobile.value = false;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+});
 </script>
 
 <template>
   <div
-    class="flex justify-between w-full px-8 py-6 bg-[#151317] bg-opacity-80 md:hidden"
+    class="flex justify-between w-full px-8 py-3 bg-[#151317] bg-opacity-80 md:hidden"
   >
     <h2>zukrein</h2>
     <Transition>
