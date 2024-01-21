@@ -155,7 +155,7 @@ onUnmounted(() => {
 const router = useRouter();
 
 router.beforeEach(async (to, from, next) => {
-  await await new Promise((resolve) => {
+  await new Promise((resolve) => {
     content.value?.style.setProperty("opacity", "0");
     setTimeout(() => {
       resolve(true);
@@ -169,7 +169,7 @@ router.afterEach(async (to, from) => {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve(true);
-    }, 50);
+    }, 150);
   });
 
   content.value?.style.setProperty("opacity", "1");

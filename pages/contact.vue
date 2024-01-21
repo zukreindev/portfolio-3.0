@@ -3,7 +3,7 @@ import { Icon } from "@iconify/vue";
 const platforms = [
   {
     name: "Mail",
-    alt: "contact@zukrein.me",
+    alt: "contact@zukrein.xyz",
     icon: "mdi:email",
     link: "mailto:contact@zukrein.xyz",
   },

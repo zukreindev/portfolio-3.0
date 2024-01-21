@@ -29,7 +29,6 @@ onMounted(() => {
 
 const handleClick = () => {
   toggleSidebar.value = toggleSidebar.value ? false : true;
-  new Audio("/mouse.mp3").play();
 };
 
 const handleResize = () => {
