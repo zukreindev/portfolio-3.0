@@ -1,6 +1,6 @@
 ---
-title: Decoding JavaScript Package Managers: NPM vs Yarn vs PNPM
-description: JS paket yöneticileri dünyasında gezinin. Projelerinizdeki bağımlılık yönetimini kolaylaştırmak için NPM, Yarn ve PNPM'yi karşılaştırın.
+title: Decoding JavaScript Package Managers; NPM vs Yarn vs PNPM
+description: Navigate the world of JS package managers. Compare NPM, Yarn, and PNPM to streamline dependency management in your projects.
 thumbnail: https://miro.medium.com/v2/resize:fit:1358/1*wyh8qtwkeCSNAfERWrcy1g.jpeg
 date: 30/01/2024 | dd-mm-yyyy
 ---
