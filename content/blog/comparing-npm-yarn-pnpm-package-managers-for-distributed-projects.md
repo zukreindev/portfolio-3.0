@@ -1,6 +1,6 @@
 ---
-title: Choosing the Right Package Manager0; Navigating NPM, Yarn, and PNPM for Distributed JavaScript Projects
-description: Explore the landscape of JavaScript package managers with a comprehensive comparison of NPM, Yarn, and PNPM. Learn the strengths and weaknesses of each tool to make informed decisions for efficient and scalable management of dependencies in your distributed projects.
+title: Decoding JavaScript Package Managers: NPM vs Yarn vs PNPM
+description: JS paket yöneticileri dünyasında gezinin. Projelerinizdeki bağımlılık yönetimini kolaylaştırmak için NPM, Yarn ve PNPM'yi karşılaştırın.
 thumbnail: https://miro.medium.com/v2/resize:fit:1358/1*wyh8qtwkeCSNAfERWrcy1g.jpeg
 date: 30/01/2024 | dd-mm-yyyy
 ---
