@@ -4,7 +4,7 @@ import { Icon } from "@iconify/vue";
 const props = defineProps<{
   src: string;
   alt: string | "undefined";
-  class: string;
+  class?: string;
 }>();
 const loaded = ref<"loading" | "error" | "loaded">("loading");
 
@@ -29,7 +29,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <img
+  <NuxtImg
+    :quality="80"
+    format="webp"
+    loading="lazy"
     v-if="loaded === 'loaded'"
     :src="props.src"
     :alt="props.alt"

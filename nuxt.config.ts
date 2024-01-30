@@ -1,12 +1,21 @@
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "nuxt-particles", "@nuxt/content"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-particles",
+    "@nuxt/content",
+    "@nuxt/image",
+  ],
   devtools: { enabled: true },
   tailwindcss: {
-    cssPath: "~/public/css/tailwind.css",
+    cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config.js",
   },
+
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       meta: [
         {
           name: "theme-color",
