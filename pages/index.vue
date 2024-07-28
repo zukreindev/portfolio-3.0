@@ -11,7 +11,7 @@ useSeoMeta({
   ogTitle: "Zukrein",
   ogType: "website",
   ogLocale: "tr_TR",
-  ogSiteName: "zukrein.xyz",
+  ogSiteName: "zukrein.com",
   twitterCard: "summary_large_image",
   description: `I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. Join me in exploring my portfolio where design meets innovation.`,
   twitterTitle: "Zukrein",

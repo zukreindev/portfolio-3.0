@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
   const pagesConverted = pages.map(
     (page) => `
             <url>
-                <loc>https://zukrein.xyz${page.path}</loc>
+                <loc>https://zukrein.com${page.path}</loc>
                 <lastmod>${lastmod}</lastmod>
                 <priority>${page.priority}</priority>
             </url>`
@@ -40,7 +40,7 @@ export default defineEventHandler(async (event) => {
   const postsConverted = docs.map(
     (doc) => `
             <url>
-                <loc>https://zukrein.xyz${doc._path}</loc>
+                <loc>https://zukrein.com${doc._path}</loc>
                 <lastmod>${lastmod}</lastmod>
                 <priority>0.5</priority>
             </url>`

@@ -3,9 +3,9 @@ import { Icon } from "@iconify/vue";
 const platforms = [
   {
     name: "Mail",
-    alt: "contact@zukrein.xyz",
+    alt: "contact@zukrein.com",
     icon: "mdi:email",
-    link: "mailto:contact@zukrein.xyz",
+    link: "mailto:contact@zukrein.com",
   },
   {
     name: "Discord",
@@ -60,7 +60,7 @@ useSeoMeta({
   ogTitle: "Zukrein | Contacts",
   ogType: "website",
   ogLocale: "tr_TR",
-  ogSiteName: "zukrein.xyz",
+  ogSiteName: "zukrein.com",
   twitterCard: "summary_large_image",
   description: `I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. Join me in exploring my portfolio where design meets innovation.`,
   twitterTitle: "Zukrein | Contacts",
