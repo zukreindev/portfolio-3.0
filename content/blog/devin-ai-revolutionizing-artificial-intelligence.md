@@ -1,5 +1,5 @@
 ---
-title: Decoding Exploring Devin AI: Revolutionizing Artificial Intelligence
+title: Decoding Exploring Devin AI; Revolutionizing Artificial Intelligence
 description: Discover how Devin AI is transforming industries with its advanced natural language processing and machine learning capabilities. Learn about its features and applications.
 thumbnail: https://i.imgur.com/ws4OTxb.png
 date: 29/07/2024 | dd-mm-yyyy
