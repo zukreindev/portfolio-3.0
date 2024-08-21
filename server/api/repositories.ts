@@ -8,13 +8,14 @@ export default cachedEventHandler(
         },
       }
     ).then((res) => res.json())) as Record<string, any>[];
-
+    
+    console.log(data);
     return data
       .filter((repo) => !repo.fork)
       .sort((a: any, b: any) => {
         return Date.parse(b.created_at) - Date.parse(a.created_at);
       });
-  },
+    },
   {
     swr: true,
     maxAge: 60 * 60 * 6,

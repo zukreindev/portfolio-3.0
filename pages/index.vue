@@ -5,7 +5,7 @@ useSeoMeta({
   title: "Zukrein | Home",
   author: "Zukrein",
   ogDescription:
-    "I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. ",
+    "I'm a 18-year-old UI designer and full-stack developer who's been immersed in the industry for 6 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. ",
   ogImage: "/images/ogimage.jpg",
   ogUrl: "https://zukrein.me",
   ogTitle: "Zukrein",
@@ -13,10 +13,10 @@ useSeoMeta({
   ogLocale: "tr_TR",
   ogSiteName: "zukrein.com",
   twitterCard: "summary_large_image",
-  description: `I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. Join me in exploring my portfolio where design meets innovation.`,
+  description: `I'm a 18-year-old UI designer and full-stack developer who's been immersed in the industry for 6 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. Join me in exploring my portfolio where design meets innovation.`,
   twitterTitle: "Zukrein",
   twitterDescription:
-    "I'm a 17-year-old UI designer and full-stack developer who's been immersed in the industry for 3 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. ",
+    "I'm a 18-year-old UI designer and full-stack developer who's been immersed in the industry for 6 years. I blend user-friendly design with cutting-edge technology to create seamless and engaging experiences. ",
   twitterImage: "/images/ogimage.jpg",
 });
 </script>
@@ -25,9 +25,9 @@ useSeoMeta({
   <div class="flex flex-col gap-8 md:gap-10">
     <h2 class="text-2xl md:text-3xl">Hello There</h2>
     <p class="text-normal md:text-lg">
-      I'm a 17-year-old <span class="text-[#AE3DFF]">UI designer</span> and
+      I'm a 18-year-old <span class="text-[#AE3DFF]">UI designer</span> and
       <span class="text-[#AE3DFF]">full-stack</span> developer who's been
-      immersed in the industry for 3 years. I blend user-friendly design with
+      immersed in the industry for 6 years. I blend user-friendly design with
       cutting-edge technology to create seamless and engaging experiences. Join
       me in exploring my portfolio where design meets innovation.
     </p>

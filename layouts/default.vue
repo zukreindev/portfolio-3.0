@@ -137,7 +137,7 @@ const checkKonami = (e: KeyboardEvent) => {
   if (konamiCode === konami.length) {
     options.value.particles.number.value = 100;
     new Audio(
-      "https://cdn.discordapp.com/attachments/1118633571360444496/1155244787868389426/y2mate.com_-_Nympea_BABY_Official_Video.mp3#t=00:00:20"
+      "https://cdn.discordapp.com/attachments/1089486214832324679/1274330024236945488/mp3indirdur-Alizade-24-7-ft-Bege.mp3?ex=66c1dbd1&is=66c08a51&hm=b8640214b039436a8aaa77e230fbca9c79d06f30b6e50794b6b23471d3c4e919&#t=00:00:20"
     ).play();
   }
 };
@@ -146,38 +146,23 @@ const content = ref<HTMLElement | null>(null);
 onMounted(() => {
   window.addEventListener("keydown", checkKonami);
   isPhone = window.innerWidth < 768;
-    fetch("https://raw.githubusercontent.com/adryd325/oneko.js/8fa8a1864aa71cd7a794d58bc139e755e96a236c/oneko.js")
-            .then(x => x.text())
-            .then(s => s.replace("./oneko.gif", "https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif")
-                .replace("(isReducedMotion)", "(false)"))
-            .then(eval);
+  fetch(
+    "https://raw.githubusercontent.com/adryd325/oneko.js/8fa8a1864aa71cd7a794d58bc139e755e96a236c/oneko.js"
+  )
+    .then((x) => x.text())
+    .then((s) =>
+      s
+        .replace(
+          "./oneko.gif",
+          "https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif"
+        )
+        .replace("(isReducedMotion)", "(false)")
+    )
+    .then(eval);
 });
 
 onUnmounted(() => {
   window.removeEventListener("keydown", checkKonami);
-});
-
-const router = useRouter();
-
-router.beforeEach(async (to, from, next) => {
-  await new Promise((resolve) => {
-    content.value?.style.setProperty("opacity", "0");
-    setTimeout(() => {
-      resolve(true);
-    }, 150);
-  });
-
-  next();
-});
-
-router.afterEach(async (to, from) => {
-  await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(true);
-    }, 150);
-  });
-
-  content.value?.style.setProperty("opacity", "1");
 });
 </script>
 

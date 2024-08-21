@@ -44,6 +44,7 @@ const onClick = (url: string) => {
 
     <div
       class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-7 mt-4"
+      v-if="repos?.length"
     >
       <LayoutsRippleEffect
         class="bg-gray-100 bg-opacity-5 hover:bg-opacity-10 w-full rounded-md backdrop-blur-md overflow-hidden text-gray-200 shadow-lg hover:-translate-y-1 cursor-pointer transition-all h-full"
@@ -74,6 +75,16 @@ const onClick = (url: string) => {
           </div></NuxtLink
         >
       </LayoutsRippleEffect>
+    </div>
+    <div v-else>
+      <div class="w-full h-[50vh] flex justify-center items-center">
+        <p>
+          <Icon
+            icon="mdi:loading"
+            class="text-4xl text-gray-300 animate-spin"
+          />
+        </p>
+      </div>
     </div>
   </div>
 </template>
